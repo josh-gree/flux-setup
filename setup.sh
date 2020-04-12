@@ -8,4 +8,5 @@ kubectl create namespace flux
 helm upgrade -i flux fluxcd/flux \
 --set git.url=git@github.com:josh-gree/flux-setup \
 --set git.pollInterval=30s \
+--set syncGarbageCollection.enabled=true \
 --namespace flux
