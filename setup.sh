@@ -7,8 +7,5 @@ kubectl create namespace flux
 
 helm upgrade -i flux fluxcd/flux \
 --set git.url=git@github.com:josh-gree/flux-setup \
---namespace flux
-
-helm upgrade -i helm-operator fluxcd/helm-operator \
---set git.ssh.secretName=flux-git-deploy \
+--set git.pollInterval=30s \
 --namespace flux
