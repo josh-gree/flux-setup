@@ -5,12 +5,10 @@ metadata:
 spec:
   restartPolicy: OnFailure
   containers:
-    - name: nvidia-smi
-      image: nvidia/cuda:9.2-devel
-      args:
-        - "nvidia-smi"
-      resources:
-        limits:
-          nvidia.com/gpu: 1
-  nodeSelector:
-    gpu: true
+  - name: nvidia-smi
+    image: nvidia/cuda:latest
+    args:
+    - "nvidia-smi"
+    resources:
+      limits:
+        nvidia.com/gpu: 1
