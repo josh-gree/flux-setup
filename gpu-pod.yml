@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: gpu
   labels:
-    app: nginx
+    app: gpu
 spec:
   containers:
     - name: cuda-vector-add
